@@ -46,9 +46,9 @@ func main() {
 					return nil
 				}
 				if dryRun {
-					log.Printf("[%s] last modify time: <%s>, size in bytes: <%d> --dry-run", path, info.ModTime(), info.Size())
+					log.Printf("[%s] last modify time: [%s], size in bytes: [%d] --dry-run", path, info.ModTime(), info.Size())
 				} else {
-					log.Printf("[%s] last modify time: <%s>, size in bytes: <%d>", path, info.ModTime(), info.Size())
+					log.Printf("[%s] last modify time: [%s], size in bytes: [%d]", path, info.ModTime(), info.Size())
 					if pathErr := os.Remove(path); pathErr != nil {
 						log.Printf("error deleting file: %s ---> %v", path, pathErr)
 					}

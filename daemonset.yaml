@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: log-walk
+      k8s-app: log-walk
   template:
     metadata:
       labels:
@@ -18,7 +18,7 @@ spec:
         - name: log-walk
           image: harbor.geniusafc.com/infra/log-walk:1.0.0
           command: ["/app/log-walk"]
-          args: ["--work-hour=14", "--path=/logs", "--preserve-hour=1000", "--nap-time=50", "--dry-run"]
+          args: ["--work-hour=3", "--path=/logs", "--preserve-hour=720", "--nap-time=30"]
           imagePullPolicy: Always
           resources:
             requests:
