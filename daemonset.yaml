@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: log-walk
-          image: harbor.geniusafc.com/infra/log-walk:1.0.0
+          image: infra/log-walk:1.0.0
           command: ["/app/log-walk"]
           args: ["--work-hour=3", "--path=/logs", "--preserve-hour=720", "--nap-time=30"]
           imagePullPolicy: Always
